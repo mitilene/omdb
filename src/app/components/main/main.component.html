@@ -1,0 +1,51 @@
+<div class="container">
+  <section class="row text-center my-5">
+    <div class="col-12">
+      <h1 class="mb-2">Filmes</h1>
+    </div>
+    <div class="col-12 mt-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+  </section>
+
+  <section>
+    <form id="form">
+      <div class="row">
+        <div class="col-md-6 col-12 mb-3 mb-md-0">
+          <input type="search" class="form-control" id="ntt-search" placeholder="Procurar filme..." required #newItem>
+          <div class="invalid-feedback">
+            Campo obrigatório.
+          </div>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <button class="btn btn-primary w-100" type="button" (click)="getMovies()">Search</button>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <button class="btn btn-outline-primary w-100" type="reset" (click)="cleanMovies()">Reset</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="mt-5" *ngIf="movies.length > 0; else elseTemplate">
+      <ul class="d-flex flex-wrap justify-content-center w-100">
+        <li *ngFor="let movie of movies" class="m-3">
+          <img [src]="movie.Poster"/>
+          <p><b>Título:</b> {{movie?.Title}}</p>
+          <p><b>Ano:</b>{{movie?.Year}}</p>
+          <p><b>Tipo:</b>{{movie?.Type}}</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!--<app-search-movie></app-search-movie>-->
+
+  <ng-template #elseTemplate>
+    <app-movie></app-movie>
+  </ng-template>
+
+</div>
+

@@ -1,0 +1,29 @@
+<form id="form">
+  <div class="row">
+    <div class="col-md-6 col-12 mb-3 mb-md-0">
+      <input type="search" class="form-control" id="ntt-search" placeholder="Procurar filme..." required #newItem>
+      <div class="invalid-feedback">
+        Campo obrigatório.
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <button class="btn btn-primary w-100" type="button" (click)="getMovies(newItem.value)">Search</button>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <button class="btn btn-outline-primary w-100" type="reset" (click)="cleanMovies()">Reset</button>
+    </div>
+  </div>
+</form>
+
+<div>
+  <ul *ngFor="let movie of movies">
+    <img [src]="movie.Poster" />
+    <li>{{movie?.Title}}</li>
+    <li>{{movie?.Year}}</li>
+    <li>{{movie?.Type}}</li>
+  </ul>
+</div>
+
+

@@ -1,0 +1,25 @@
+/**********************************************/
+/* CSS Imports */
+/**********************************************/
+@import "~src/assets/scss/variable";
+
+h2 {
+  font-weight: 600;
+}
+
+.ntt-review {
+  & svg {
+    color: #fecc00;
+    margin: 0 .1rem;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+img {
+  width: 300px;
+  height: auto;
+  display: block;
+  background: #fecc00;
+  padding: 1rem;
+}

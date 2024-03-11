@@ -1,0 +1,21 @@
+/**********************************************/
+/* CSS Imports */
+/**********************************************/
+@import "~src/assets/scss/variable";
+
+div {
+  background: $color-bg;
+  height: 80px;
+  box-shadow: 0 0 12px 0 $color-primary-components;
+  border-bottom: 3px solid $color-primary-components;
+  position: fixed;
+  top: 0;
+
+  a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: 'mulishregular', "Helvetica Neue", sans-serif;
+    color: $color-primary-components;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,51 @@
+/**********************************************/
+/* CSS Imports */
+/**********************************************/
+@import "assets/css/reset.css";
+@import "assets/scss/variable";
+
+@font-face {
+  font-family: 'mulishregular';
+  src: url('assets/fonts/mulish-variablefont_wght-webfont.eot');
+  src: url('assets/fonts/mulish-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+  url('assets/fonts/mulish-variablefont_wght-webfont.woff') format('woff'),
+  url('assets/fonts/mulish-variablefont_wght-webfont.svg#mulishregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'mulishregular', "Helvetica Neue", sans-serif;
+  color: $color-primary-text;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.btn-primary {
+  background: $color-primary-components;
+  border-color: $color-primary-components;
+  
+  &:hover {
+    background: #950101;
+    border-color: #950101;
+  }
+}
+
+.btn-outline-primary {
+  border-color: $color-primary-components;
+  color: $color-primary-components;
+  
+  &:hover {
+    background: $color-primary-components;
+    border-color: $color-primary-components;
+    color: #FFF;
+  }
+}
+

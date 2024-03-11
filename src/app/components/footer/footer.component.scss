@@ -1,0 +1,15 @@
+/**********************************************/
+/* CSS Imports */
+/**********************************************/
+@import "~src/assets/scss/variable";
+
+div {
+  background: $color-bg;
+  height: 80px;
+  position: sticky;
+  bottom: 0;
+
+  a {
+    color: $color-primary-components;
+  }
+}
